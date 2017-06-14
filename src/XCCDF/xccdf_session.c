@@ -428,9 +428,9 @@ bool xccdf_session_set_profile_id(struct xccdf_session *session, const char *pro
 bool xccdf_session_set_profile_id_by_suffix(struct xccdf_session *session, const char *profile_suffix)
 {
 	const char *full_profile_id = NULL;
-    struct xccdf_benchmark *bench = xccdf_policy_model_get_benchmark(session->xccdf.policy_model);
+	struct xccdf_benchmark *bench = xccdf_policy_model_get_benchmark(session->xccdf.policy_model);
 
-    // Tailoring Profiles
+	// Tailoring Profiles
 	struct xccdf_tailoring *tailoring = xccdf_policy_model_get_tailoring(session->xccdf.policy_model);
 	if (tailoring != NULL)   {
 		struct xccdf_profile_iterator *profit_tailoring = xccdf_tailoring_get_profiles(tailoring);
